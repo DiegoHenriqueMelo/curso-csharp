@@ -1,10 +1,12 @@
-﻿using Exemplo_Fundamentos.Commonm.Models;
+﻿using Exemplo_Fundamentos.Common.Models;
 
 // Instancando Objeto
-Pessoa p = new();
+Pessoa p = new()
+{
+    Nome = "Diego",
+    Idade = 20
+};
 
-p.Nome = "Diego";
-p.Idade = 20;
 p.Apresentar();
 
 // Tipos de Dados
@@ -65,7 +67,7 @@ else
 ;
 
 Console.WriteLine("Digite uma letra: ");
-string letra = Console.ReadLine();
+string letra = Console.ReadLine() ?? "";
 
 switch (letra)
 {
@@ -105,10 +107,45 @@ calc.Subtrair(10, 5);
 calc.Multiplicar(10, 5);
 calc.Dividir(10, 5);
 calc.Modulo(10, 5);
-calc.Potencia(3,2);
+calc.Potencia(3, 2);
 calc.Raiz(25);
 calc.Decremento(10);
 calc.Incremento(10);
 calc.TabuadaFor(27365);
 calc.TabuadaWhile(19);
 calc.evenOrOdd(20);
+
+
+int[] inteiros = new int[3];
+
+inteiros[0] = 72;
+inteiros[1] = 32;
+inteiros[2] = 939;
+
+string[] names = ["Diego", "Milena", "Teste"];
+
+bool[] mtz = new bool[] { true, false, false, true };
+
+
+List<char> listaChar = new List<char>();
+
+listaChar.Add('A');
+listaChar.Add('B');
+listaChar.Add('C');
+
+
+
+foreach (int valor in inteiros)
+{
+    Console.WriteLine(valor);
+}
+
+foreach (string nome in names)
+{
+    Console.WriteLine(nome);
+}
+foreach (char caractere in listaChar)
+{
+    Console.WriteLine(caractere);
+}
+

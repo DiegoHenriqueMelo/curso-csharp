@@ -49,7 +49,7 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 - [x] Operadores e expressões
 - [x] Estruturas de controle (if, switch, loops)
 - [x] Métodos e funções
-- [ ] Arrays e coleções básicas
+- [x] Arrays e coleções básicas
 
 ### 📌 Fase 2: Programação Orientada a Objetos
 - [x] Classes e objetos
@@ -149,10 +149,15 @@ Solução .NET organizada com múltiplos projetos:
   - Verificação de números pares/ímpares com `do-while`
 
 **ExemploFundamentos** (Projeto Console):
+- **Arrays**: declaração, inicialização e acesso a elementos (`int[]`, `string[]`, `bool[]`)
+- **List<T>**: coleções genéricas dinâmicas (`List<char>`)
+- **Iteração**: loops `foreach` para percorrer arrays e listas
 - Conversão de tipos: exemplos práticos de Parse e Convert
 - Estruturas condicionais: if/else e switch/case
 - Estruturas de repetição: for, while, do-while
 - Operadores: lógicos e aritméticos
+- Inicializador de objetos com propriedades `required`
+- Operação nula segura (`??`) com `Console.ReadLine()`
 - Utilização da biblioteca comum via referência de projeto
 
 ### Links Úteis
@@ -185,8 +190,17 @@ Solução .NET organizada com múltiplos projetos:
 #### ✅ Estruturas de Controle
 - **Condicionais**: `if/else`, `switch/case`
 - **Loops**: `for`, `while`, `do-while`
+- **Iteração**: `foreach` para percorrer coleções
 - Operadores de decisão
 - Estruturas de repetição com condições
+
+#### ✅ Arrays e Coleções
+- Arrays tipados: `int[]`, `string[]`, `bool[]`
+- Inicialização de arrays: `new int[3]`, `["item1", "item2"]`
+- Acesso por índice
+- `List<T>`: coleção genérica dinâmica
+- Métodos de List: `Add()`, iteração com `foreach`
+- Operação nula segura: `??` (null coalescing)
 
 #### ✅ Programação Orientada a Objetos
 - Criação de classes personalizadas (`Pessoa`, `Calculadora`)
@@ -206,21 +220,21 @@ Solução .NET organizada com múltiplos projetos:
 ## 📈 Progresso Atual
 
 ```
-█████████░░░░░░░░░░░ 45% Concluído
+██████████░░░░░░░░░░ 50% Concluído
 ```
 
 **Última atualização:** Dezembro 2025
 
 **🎯 Próximos Passos:**
-- Arrays e coleções básicas
 - Herança e polimorfismo
-- Interfaces
+- Interfaces e classes abstratas
+- Tratamento de exceções
 
 ---
 
 ## 🎯 Objetivos
 
-- [ ] Dominar os fundamentos do C#
+- [x] Dominar os fundamentos do C#
 - [ ] Construir aplicações console robustas
 - [ ] Desenvolver APIs REST
 - [ ] Criar aplicações web com ASP.NET Core
