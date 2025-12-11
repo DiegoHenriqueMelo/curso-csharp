@@ -35,6 +35,9 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 │   └── 📂 ExemploFundamentos/         # Projeto principal
 │       ├── Program.cs             # Exemplos práticos
 │       └── Exemplo Fundamentos.csproj
+├── 📂 Desafio Estacionamento/     # Sistema de estacionamento
+│   ├── Program.cs             # Lógica do sistema
+│   └── Desafio Estacionamento.csproj
 └── README.md                  # Este arquivo
 ```
 
@@ -160,6 +163,25 @@ Solução .NET organizada com múltiplos projetos:
 - Operação nula segura (`??`) com `Console.ReadLine()`
 - Utilização da biblioteca comum via referência de projeto
 
+#### Desafio Estacionamento
+Sistema de gerenciamento de estacionamento aplicando conceitos fundamentais:
+
+**Funcionalidades:**
+- 🅿️ Cadastro de veículos (placas)
+- 👁️ Listagem de veículos estacionados
+- 💰 Cálculo de preço baseado em tempo (taxa inicial + hora)
+- ❌ Remoção de veículos com cobrança
+- 🔄 Menu interativo com loop `do-while`
+
+**Conceitos Aplicados:**
+- `List<T>` para armazenar veículos, preços e menu
+- Validação com `string.IsNullOrEmpty()` e `Contains()`
+- Métodos de List: `Add()`, `Remove()`, `Count`
+- `switch/case` para navegação no menu
+- Formatação de moeda com `:F2`
+- Entrada do usuário com `Console.ReadLine()`
+- Lógica de negócio aplicada (cálculo de tarifas)
+
 ### Links Úteis
 - [Documentação Oficial C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 - [Documentação .NET](https://docs.microsoft.com/pt-br/dotnet/)
@@ -199,7 +221,9 @@ Solução .NET organizada com múltiplos projetos:
 - Inicialização de arrays: `new int[3]`, `["item1", "item2"]`
 - Acesso por índice
 - `List<T>`: coleção genérica dinâmica
-- Métodos de List: `Add()`, iteração com `foreach`
+- Métodos de List: `Add()`, `Remove()`, `Contains()`, `Count`
+- Validação de strings: `string.IsNullOrEmpty()`
+- Iteração com `foreach`
 - Operação nula segura: `??` (null coalescing)
 
 #### ✅ Programação Orientada a Objetos
@@ -220,10 +244,12 @@ Solução .NET organizada com múltiplos projetos:
 ## 📈 Progresso Atual
 
 ```
-██████████░░░░░░░░░░ 50% Concluído
+██████████░░░░░░░░░░ 52% Concluído
 ```
 
 **Última atualização:** Dezembro 2025
+
+**🏆 Projetos Práticos Concluídos:** 1 (Sistema de Estacionamento)
 
 **🎯 Próximos Passos:**
 - Herança e polimorfismo
