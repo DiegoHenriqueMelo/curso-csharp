@@ -110,3 +110,6 @@ calc.Potencia(3,2);
 calc.Raiz(25);
 calc.Decremento(10);
 calc.Incremento(10);
+calc.TabuadaFor(27365);
+calc.TabuadaWhile(19);
+calc.evenOrOdd(20);

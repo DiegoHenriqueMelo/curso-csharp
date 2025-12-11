@@ -37,7 +37,7 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 
 ## 🗺️ Roadmap de Estudos .NET
 
-### 📌 Fase 1: Fundamentos (Em Progresso)
+### 📌 Fase 1: Fundamentos (Concluído)
 - [x] Configuração do ambiente de desenvolvimento
 - [x] Sintaxe básica do C#
 - [x] Tipos de dados e variáveis
@@ -135,9 +135,14 @@ dotnet run
 #### Exemplo Fundamentos
 Aplicação console que demonstra:
 - **Classe Pessoa**: modelo básico com propriedades e métodos
-- **Classe Calculadora**: operações matemáticas (soma, subtração, multiplicação, divisão, módulo, potência, raiz, incremento, decremento)
+- **Classe Calculadora**: 
+  - Operações matemáticas (soma, subtração, multiplicação, divisão, módulo, potência, raiz)
+  - Incremento e decremento (pré e pós)
+  - Tabuada com loop `for` e `while`
+  - Verificação de números pares/ímpares com `do-while`
 - **Conversão de tipos**: exemplos práticos de Parse e Convert
 - **Estruturas condicionais**: if/else e switch/case
+- **Estruturas de repetição**: for, while, do-while
 - **Operadores**: lógicos e aritméticos
 
 ### Links Úteis
@@ -165,8 +170,10 @@ Aplicação console que demonstra:
 - **Comparação**: `>=`, `<=`, `==`, `!=`
 
 #### ✅ Estruturas de Controle
-- Condicionais: `if/else`, `switch/case`
+- **Condicionais**: `if/else`, `switch/case`
+- **Loops**: `for`, `while`, `do-while`
 - Operadores de decisão
+- Estruturas de repetição com condições
 
 #### ✅ Programação Orientada a Objetos
 - Criação de classes personalizadas (`Pessoa`, `Calculadora`)
@@ -184,7 +191,7 @@ Aplicação console que demonstra:
 ## 📈 Progresso Atual
 
 ```
-████████░░░░░░░░░░░░ 35% Concluído
+████████░░░░░░░░░░░░ 40% Concluído
 ```
 
 **Última atualização:** Dezembro 2025

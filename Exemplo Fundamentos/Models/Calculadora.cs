@@ -47,5 +47,45 @@ namespace Exemplo_Fundamentos.Models
             int numDecrement = --x;  // Pré-decremento: decrementa ANTES
             Console.WriteLine($"Resultado: {numDecrement}");
         }
+
+        // Estruturas de Repetição
+        public void TabuadaFor(int x)
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                Console.WriteLine($"{x} * {i} = {x * i}");
+            }
+        }
+
+        public void TabuadaWhile(int x)
+        {
+            int i = 0;
+            while (i <= 10)
+            {
+                Console.WriteLine($"{x} * {i} = {x * i}");
+                i++;
+            }
+        }
+
+        public void evenOrOdd(int x)
+        {
+            int i = 0;
+            do
+            {
+                if (i == 0)
+                {
+                    Console.WriteLine($"{i} é: NULO");
+                }
+                else if (i % 2 == 0)
+                {
+                    Console.WriteLine($"{i} é: PAR");
+                }
+                else
+                {
+                    Console.WriteLine($"{i} é: IMPAR");
+                }
+                i++;
+            } while (i <= x);
+        }
     }
 }
