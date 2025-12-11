@@ -26,8 +26,10 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 ```
 📁 curso-csharp/
 ├── 📂 Exemplo Fundamentos/     # Conceitos básicos de C#
-│   ├── Models/                 # Classes e modelos
-│   └── Program.cs             # Ponto de entrada da aplicação
+│   ├── Models/
+│   │   ├── Pessoa.cs          # Classe modelo de pessoa
+│   │   └── Calculadora.cs     # Operações matemáticas
+│   └── Program.cs             # Exemplos práticos
 └── README.md                  # Este arquivo
 ```
 
@@ -38,20 +40,20 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 ### 📌 Fase 1: Fundamentos (Em Progresso)
 - [x] Configuração do ambiente de desenvolvimento
 - [x] Sintaxe básica do C#
-- [ ] Tipos de dados e variáveis
-- [ ] Operadores e expressões
-- [ ] Estruturas de controle (if, switch, loops)
-- [ ] Métodos e funções
+- [x] Tipos de dados e variáveis
+- [x] Operadores e expressões
+- [x] Estruturas de controle (if, switch, loops)
+- [x] Métodos e funções
 - [ ] Arrays e coleções básicas
 
 ### 📌 Fase 2: Programação Orientada a Objetos
-- [ ] Classes e objetos
-- [ ] Encapsulamento
+- [x] Classes e objetos
+- [x] Encapsulamento
+- [x] Propriedades e indexadores
 - [ ] Herança
 - [ ] Polimorfismo
 - [ ] Interfaces
 - [ ] Classes abstratas
-- [ ] Propriedades e indexadores
 
 ### 📌 Fase 3: Conceitos Intermediários
 - [ ] Tratamento de exceções
@@ -128,6 +130,16 @@ dotnet run
 
 ## 📝 Anotações e Recursos
 
+### 🎯 Projetos no Repositório
+
+#### Exemplo Fundamentos
+Aplicação console que demonstra:
+- **Classe Pessoa**: modelo básico com propriedades e métodos
+- **Classe Calculadora**: operações matemáticas (soma, subtração, multiplicação, divisão, módulo, potência, raiz, incremento, decremento)
+- **Conversão de tipos**: exemplos práticos de Parse e Convert
+- **Estruturas condicionais**: if/else e switch/case
+- **Operadores**: lógicos e aritméticos
+
 ### Links Úteis
 - [Documentação Oficial C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 - [Documentação .NET](https://docs.microsoft.com/pt-br/dotnet/)
@@ -135,16 +147,44 @@ dotnet run
 - [C# Corner](https://www.c-sharpcorner.com/)
 
 ### Conceitos Aprendidos
-- ✅ Criação de projetos console
-- ✅ Estrutura básica de um programa C#
-- ✅ Namespaces e classes
+
+#### ✅ Fundamentos da Linguagem
+- Criação de projetos console com .NET CLI
+- Estrutura básica de um programa C#
+- Namespaces e organização de código
+- Instanciação de objetos
+
+#### ✅ Tipos de Dados
+- Tipos primitivos: `int`, `string`, `char`, `bool`, `decimal`, `double`, `float`
+- Tipos especiais: `byte`, `long`, `uint`, `short`, `ulong`
+- Conversão entre tipos: `Parse()`, `Convert.ToInt32()`, `ToString()`
+
+#### ✅ Operadores
+- **Aritméticos**: `+`, `-`, `*`, `/`, `%`, `++`, `--`
+- **Lógicos**: `||` (OR), `&&` (AND), `!` (NOT)
+- **Comparação**: `>=`, `<=`, `==`, `!=`
+
+#### ✅ Estruturas de Controle
+- Condicionais: `if/else`, `switch/case`
+- Operadores de decisão
+
+#### ✅ Programação Orientada a Objetos
+- Criação de classes personalizadas (`Pessoa`, `Calculadora`)
+- Propriedades com `get` e `set`
+- Métodos de instância
+- Encapsulamento de dados
+
+#### ✅ Matemática em C#
+- Uso da classe `Math`
+- Operações: potência (`Math.Pow`), raiz quadrada (`Math.Sqrt`)
+- Implementação de calculadora com operações básicas
 
 ---
 
 ## 📈 Progresso Atual
 
 ```
-████░░░░░░░░░░░░░░░░ 15% Concluído
+████████░░░░░░░░░░░░ 35% Concluído
 ```
 
 **Última atualização:** Dezembro 2025
