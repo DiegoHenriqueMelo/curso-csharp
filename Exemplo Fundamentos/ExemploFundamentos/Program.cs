@@ -1,5 +1,4 @@
-﻿using Exemplo_Fundamentos.Models;
-
+﻿using Exemplo_Fundamentos.Commonm.Models;
 
 // Instancando Objeto
 Pessoa p = new();

@@ -25,11 +25,16 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 
 ```
 📁 curso-csharp/
-├── 📂 Exemplo Fundamentos/     # Conceitos básicos de C#
-│   ├── Models/
-│   │   ├── Pessoa.cs          # Classe modelo de pessoa
-│   │   └── Calculadora.cs     # Operações matemáticas
-│   └── Program.cs             # Exemplos práticos
+├── 📂 Exemplo Fundamentos/
+│   ├── Exemplo Fundamentos.sln    # Solution do .NET
+│   ├── 📂 ExemploFuncamentos.Commom/  # Biblioteca de classes comum
+│   │   ├── Models/
+│   │   │   ├── Pessoa.cs          # Classe modelo de pessoa
+│   │   │   └── Calculadora.cs     # Operações matemáticas
+│   │   └── ExemploFuncamentos.Commom.csproj
+│   └── 📂 ExemploFundamentos/         # Projeto principal
+│       ├── Program.cs             # Exemplos práticos
+│       └── Exemplo Fundamentos.csproj
 └── README.md                  # Este arquivo
 ```
 
@@ -133,17 +138,22 @@ dotnet run
 ### 🎯 Projetos no Repositório
 
 #### Exemplo Fundamentos
-Aplicação console que demonstra:
-- **Classe Pessoa**: modelo básico com propriedades e métodos
+Solução .NET organizada com múltiplos projetos:
+
+**ExemploFuncamentos.Commom** (Biblioteca de Classes):
+- **Classe Pessoa**: modelo com propriedades obrigatórias (`required`) e métodos
 - **Classe Calculadora**: 
   - Operações matemáticas (soma, subtração, multiplicação, divisão, módulo, potência, raiz)
   - Incremento e decremento (pré e pós)
   - Tabuada com loop `for` e `while`
   - Verificação de números pares/ímpares com `do-while`
-- **Conversão de tipos**: exemplos práticos de Parse e Convert
-- **Estruturas condicionais**: if/else e switch/case
-- **Estruturas de repetição**: for, while, do-while
-- **Operadores**: lógicos e aritméticos
+
+**ExemploFundamentos** (Projeto Console):
+- Conversão de tipos: exemplos práticos de Parse e Convert
+- Estruturas condicionais: if/else e switch/case
+- Estruturas de repetição: for, while, do-while
+- Operadores: lógicos e aritméticos
+- Utilização da biblioteca comum via referência de projeto
 
 ### Links Úteis
 - [Documentação Oficial C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
@@ -158,6 +168,9 @@ Aplicação console que demonstra:
 - Estrutura básica de um programa C#
 - Namespaces e organização de código
 - Instanciação de objetos
+- Organização de solutions (.sln) com múltiplos projetos
+- Bibliotecas de classes (Class Library)
+- Referências entre projetos
 
 #### ✅ Tipos de Dados
 - Tipos primitivos: `int`, `string`, `char`, `bool`, `decimal`, `double`, `float`
@@ -178,8 +191,10 @@ Aplicação console que demonstra:
 #### ✅ Programação Orientada a Objetos
 - Criação de classes personalizadas (`Pessoa`, `Calculadora`)
 - Propriedades com `get` e `set`
+- Modificador `required` para propriedades obrigatórias (C# 11+)
 - Métodos de instância
 - Encapsulamento de dados
+- Organização de código em bibliotecas reutilizáveis
 
 #### ✅ Matemática em C#
 - Uso da classe `Math`
@@ -191,10 +206,15 @@ Aplicação console que demonstra:
 ## 📈 Progresso Atual
 
 ```
-████████░░░░░░░░░░░░ 40% Concluído
+█████████░░░░░░░░░░░ 45% Concluído
 ```
 
 **Última atualização:** Dezembro 2025
+
+**🎯 Próximos Passos:**
+- Arrays e coleções básicas
+- Herança e polimorfismo
+- Interfaces
 
 ---
 
