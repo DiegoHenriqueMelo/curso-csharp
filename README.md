@@ -44,6 +44,11 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 ├── 📂 Estrutura de Dados/         # Coleções avançadas
 │   ├── Program.cs             # Queue, Stack, Dictionary
 │   └── Estrutura de Dados.csproj
+├── 📂 NuGet/                      # Pacotes NuGet e Serialização
+│   ├── Program.cs             # Serialização JSON
+│   ├── Models/
+│   │   └── Venda.cs           # Modelo de dados
+│   └── NuGet.csproj
 └── README.md                  # Este arquivo
 ```
 
@@ -77,6 +82,8 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 - [x] Tratamento de exceções
 - [x] Coleções avançadas (List, Dictionary, Queue, Stack)
 - [x] File I/O
+- [x] Serialização (JSON)
+- [x] Pacotes NuGet
 - [ ] Delegates e eventos
 - [ ] Expressões Lambda
 - [ ] LINQ (Language Integrated Query)
@@ -229,6 +236,28 @@ Exploração de estruturas de dados avançadas do .NET:
 - Diferenças entre estruturas de dados
 - Escolha adequada de estrutura por caso de uso
 
+#### NuGet
+Integração com pacotes externos e serialização de dados:
+
+**Funcionalidades:**
+- 📦 Instalação e uso de pacotes NuGet (Newtonsoft.Json)
+- 🔄 Serialização de objetos para JSON
+- 📝 Formatação de JSON com indentação
+- 🏗️ Modelo de dados com validação
+
+**Classe Venda:**
+- Construtores: padrão e parametrizado
+- Propriedades: `Id`, `Produto`, `Preco`
+- Validação no setter de `Produto`
+- Transformação com `ToUpper()`
+
+**Conceitos Aplicados:**
+- Gerenciamento de dependências com NuGet
+- `JsonConvert.SerializeObject()` do Newtonsoft.Json
+- `Formatting.Indented` para JSON formatado
+- Serialização automática de propriedades
+- Uso de bibliotecas de terceiros
+
 ### Links Úteis
 - [Documentação Oficial C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 - [Documentação .NET](https://docs.microsoft.com/pt-br/dotnet/)
@@ -291,6 +320,16 @@ Exploração de estruturas de dados avançadas do .NET:
 - Tratamento de exceções em operações de arquivo
 - Bloco `try-catch-finally` para garantir execução
 
+#### ✅ Serialização e Pacotes NuGet
+- **NuGet**: gerenciador de pacotes do .NET
+- Instalação de pacotes: `dotnet add package`
+- **Newtonsoft.Json**: biblioteca popular para JSON
+- `JsonConvert.SerializeObject()`: conversão de objeto para JSON
+- `Formatting.Indented`: formatação legível de JSON
+- Serialização automática de propriedades públicas
+- Integração com bibliotecas de terceiros
+- Gerenciamento de dependências no `.csproj`
+
 #### ✅ Programação Orientada a Objetos
 - Criação de classes personalizadas (`Pessoa`, `Calculadora`, `Curso`)
 - **Construtores**: padrão e parametrizado
@@ -324,14 +363,15 @@ Exploração de estruturas de dados avançadas do .NET:
 ## 📈 Progresso Atual
 
 ```
-████████████░░░░░░░░ 63% Concluído
+█████████████░░░░░░░ 68% Concluído
 ```
 
 **Última atualização:** Dezembro 2025
 
-**🏆 Projetos Práticos Concluídos:** 2
+**🏆 Projetos Práticos Concluídos:** 3
 - ✅ Sistema de Estacionamento
 - ✅ Estrutura de Dados (Queue, Stack, Dictionary)
+- ✅ NuGet e Serialização JSON
 
 **🎯 Próximos Passos:**
 - Herança e polimorfismo
