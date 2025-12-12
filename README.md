@@ -35,10 +35,15 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 │   │   └── ExemploFuncamentos.Commom.csproj
 │   └── 📂 ExemploFundamentos/         # Projeto principal
 │       ├── Program.cs             # Exemplos práticos
+│       ├── Arquivos/              # Manipulação de arquivos
+│       │   └── arquivo.txt
 │       └── Exemplo Fundamentos.csproj
 ├── 📂 Desafio Estacionamento/     # Sistema de estacionamento
 │   ├── Program.cs             # Lógica do sistema
 │   └── Desafio Estacionamento.csproj
+├── 📂 Estrutura de Dados/         # Coleções avançadas
+│   ├── Program.cs             # Queue, Stack, Dictionary
+│   └── Estrutura de Dados.csproj
 └── README.md                  # Este arquivo
 ```
 
@@ -68,14 +73,14 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 - [ ] Interfaces
 - [ ] Classes abstratas
 
-### 📌 Fase 3: Conceitos Intermediários
+### 📌 Fase 3: Conceitos Intermediários (Em Progresso)
 - [x] Tratamento de exceções
+- [x] Coleções avançadas (List, Dictionary, Queue, Stack)
+- [x] File I/O
 - [ ] Delegates e eventos
 - [ ] Expressões Lambda
 - [ ] LINQ (Language Integrated Query)
 - [ ] Generics
-- [ ] Coleções avançadas (List, Dictionary, etc.)
-- [ ] File I/O
 
 ### 📌 Fase 4: .NET Core e Aplicações Modernas
 - [ ] Introdução ao .NET Core/.NET 6+
@@ -169,6 +174,10 @@ Solução .NET organizada com múltiplos projetos:
   - Verificação de números pares/ímpares com `do-while`
 
 **ExemploFundamentos** (Projeto Console):
+- **File I/O**: 
+  - Leitura de arquivos com `File.ReadAllLines()`
+  - Tratamento de exceções com `try-catch-finally`
+  - Manipulação de caminhos relativos
 - **Arrays**: declaração, inicialização e acesso a elementos (`int[]`, `string[]`, `bool[]`)
 - **List<T>**: coleções genéricas dinâmicas (`List<char>`)
 - **Iteração**: loops `foreach` para percorrer arrays e listas
@@ -198,6 +207,27 @@ Sistema de gerenciamento de estacionamento aplicando conceitos fundamentais:
 - Formatação de moeda com `:F2`
 - Entrada do usuário com `Console.ReadLine()`
 - Lógica de negócio aplicada (cálculo de tarifas)
+
+#### Estrutura de Dados
+Exploração de estruturas de dados avançadas do .NET:
+
+**Estruturas Implementadas:**
+- 📊 **Queue<T>** (Fila): FIFO (First In, First Out)
+  - `Enqueue()`: adiciona elemento no final
+  - `Dequeue()`: remove elemento do início
+- 📚 **Stack<T>** (Pilha): LIFO (Last In, First Out)
+  - `Push()`: adiciona elemento no topo
+  - `Pop()`: remove elemento do topo
+- 🗂️ **Dictionary<TKey, TValue>**: pares chave-valor
+  - `Add()`: adiciona par chave-valor
+  - Acesso por chave eficiente
+  - Iteração com `foreach` em `KeyValuePair`
+
+**Conceitos Aplicados:**
+- Tipos genéricos com diferentes tipos de dados
+- Percurso de coleções com `foreach`
+- Diferenças entre estruturas de dados
+- Escolha adequada de estrutura por caso de uso
 
 ### Links Úteis
 - [Documentação Oficial C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
@@ -243,6 +273,24 @@ Sistema de gerenciamento de estacionamento aplicando conceitos fundamentais:
 - Iteração com `foreach`
 - Operação nula segura: `??` (null coalescing)
 
+#### ✅ Coleções Avançadas
+- **Queue<T>** (Fila): estrutura FIFO
+  - Métodos: `Enqueue()`, `Dequeue()`
+- **Stack<T>** (Pilha): estrutura LIFO
+  - Métodos: `Push()`, `Pop()`
+- **Dictionary<TKey, TValue>**: mapeamento chave-valor
+  - Método: `Add()`, acesso por chave
+  - `KeyValuePair` em iterações
+- Generics: `<T>` para tipos parametrizados
+- Escolha de estrutura adequada ao problema
+
+#### ✅ File I/O (Entrada/Saída de Arquivos)
+- Leitura de arquivos: `File.ReadAllLines()`
+- Caminhos relativos e absolutos
+- Iteração sobre linhas de arquivo
+- Tratamento de exceções em operações de arquivo
+- Bloco `try-catch-finally` para garantir execução
+
 #### ✅ Programação Orientada a Objetos
 - Criação de classes personalizadas (`Pessoa`, `Calculadora`, `Curso`)
 - **Construtores**: padrão e parametrizado
@@ -259,6 +307,10 @@ Sistema de gerenciamento de estacionamento aplicando conceitos fundamentais:
 
 #### ✅ Tratamento de Exceções
 - Lançamento de exceções: `throw new ArgumentException()`
+- Captura de exceções: `try-catch-finally`
+- Exceções genéricas: `Exception`
+- Acesso a mensagens de erro: `ex.Message`
+- Bloco `finally`: execução garantida
 - Validação de entrada com mensagens descritivas
 - Proteção de propriedades contra valores inválidos
 
@@ -272,12 +324,14 @@ Sistema de gerenciamento de estacionamento aplicando conceitos fundamentais:
 ## 📈 Progresso Atual
 
 ```
-███████████░░░░░░░░░ 58% Concluído
+████████████░░░░░░░░ 63% Concluído
 ```
 
 **Última atualização:** Dezembro 2025
 
-**🏆 Projetos Práticos Concluídos:** 1 (Sistema de Estacionamento)
+**🏆 Projetos Práticos Concluídos:** 2
+- ✅ Sistema de Estacionamento
+- ✅ Estrutura de Dados (Queue, Stack, Dictionary)
 
 **🎯 Próximos Passos:**
 - Herança e polimorfismo
