@@ -30,6 +30,7 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 │   ├── 📂 ExemploFuncamentos.Commom/  # Biblioteca de classes comum
 │   │   ├── Models/
 │   │   │   ├── Pessoa.cs          # Classe modelo de pessoa
+│   │   │   ├── Curso.cs           # Classe de curso com lista de alunos
 │   │   │   └── Calculadora.cs     # Operações matemáticas
 │   │   └── ExemploFuncamentos.Commom.csproj
 │   └── 📂 ExemploFundamentos/         # Projeto principal
@@ -54,17 +55,21 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 - [x] Métodos e funções
 - [x] Arrays e coleções básicas
 
-### 📌 Fase 2: Programação Orientada a Objetos
+### 📌 Fase 2: Programação Orientada a Objetos (Em Progresso)
 - [x] Classes e objetos
 - [x] Encapsulamento
 - [x] Propriedades e indexadores
+- [x] Construtores
+- [x] Validação de propriedades
+- [x] Propriedades computadas
+- [x] Relacionamentos entre classes
 - [ ] Herança
 - [ ] Polimorfismo
 - [ ] Interfaces
 - [ ] Classes abstratas
 
 ### 📌 Fase 3: Conceitos Intermediários
-- [ ] Tratamento de exceções
+- [x] Tratamento de exceções
 - [ ] Delegates e eventos
 - [ ] Expressões Lambda
 - [ ] LINQ (Language Integrated Query)
@@ -144,7 +149,19 @@ dotnet run
 Solução .NET organizada com múltiplos projetos:
 
 **ExemploFuncamentos.Commom** (Biblioteca de Classes):
-- **Classe Pessoa**: modelo com propriedades obrigatórias (`required`) e métodos
+- **Classe Pessoa**: 
+  - Construtores: padrão e parametrizado
+  - Propriedades com backing fields privados (`_nome`, `_sobrenome`, `_idade`)
+  - Validação com `throw new ArgumentException`
+  - Propriedades computadas: `NomeCompleto` (concatenação)
+  - Transformação de dados: `ToUpper()` em getters
+  - Método `Apresentar()` usando propriedade computada
+- **Classe Curso**:
+  - Relacionamento de agregação com `List<Pessoa>`
+  - Validação de propriedades
+  - Métodos CRUD: `AdicionarAluno()`, `RemoverAluno()`, `ListarAluno()`
+  - Método auxiliar: `ObertAlunos()` retorna contagem
+  - Inicialização de coleções
 - **Classe Calculadora**: 
   - Operações matemáticas (soma, subtração, multiplicação, divisão, módulo, potência, raiz)
   - Incremento e decremento (pré e pós)
@@ -227,12 +244,23 @@ Sistema de gerenciamento de estacionamento aplicando conceitos fundamentais:
 - Operação nula segura: `??` (null coalescing)
 
 #### ✅ Programação Orientada a Objetos
-- Criação de classes personalizadas (`Pessoa`, `Calculadora`)
-- Propriedades com `get` e `set`
-- Modificador `required` para propriedades obrigatórias (C# 11+)
+- Criação de classes personalizadas (`Pessoa`, `Calculadora`, `Curso`)
+- **Construtores**: padrão e parametrizado
+- **Backing Fields**: campos privados (`_nome`, `_sobrenome`, `_idade`)
+- Propriedades com `get` e `set` personalizados
+- **Validação**: lançamento de exceções (`ArgumentException`)
+- **Propriedades computadas**: somente leitura com expressão (`NomeCompleto`)
+- **Transformação de dados**: `ToUpper()` em getters
 - Métodos de instância
-- Encapsulamento de dados
+- Encapsulamento de dados com validação
+- **Relacionamentos**: agregação (Curso tem lista de Pessoas)
+- **Coleções em classes**: `List<Pessoa>` como propriedade
 - Organização de código em bibliotecas reutilizáveis
+
+#### ✅ Tratamento de Exceções
+- Lançamento de exceções: `throw new ArgumentException()`
+- Validação de entrada com mensagens descritivas
+- Proteção de propriedades contra valores inválidos
 
 #### ✅ Matemática em C#
 - Uso da classe `Math`
@@ -244,7 +272,7 @@ Sistema de gerenciamento de estacionamento aplicando conceitos fundamentais:
 ## 📈 Progresso Atual
 
 ```
-██████████░░░░░░░░░░ 52% Concluído
+███████████░░░░░░░░░ 58% Concluído
 ```
 
 **Última atualização:** Dezembro 2025
@@ -254,7 +282,7 @@ Sistema de gerenciamento de estacionamento aplicando conceitos fundamentais:
 **🎯 Próximos Passos:**
 - Herança e polimorfismo
 - Interfaces e classes abstratas
-- Tratamento de exceções
+- Delegates e eventos
 
 ---
 
