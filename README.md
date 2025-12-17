@@ -55,7 +55,11 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 │   │   ├── ContaCorrente.cs   # Sistema bancário com encapsulamento
 │   │   ├── Pessoa.cs          # Classe base com virtual methods
 │   │   ├── Aluno.cs           # Herda de Pessoa - polimorfismo
-│   │   └── Professor.cs       # Herda de Pessoa - polimorfismo
+│   │   ├── Professor.cs       # Herda de Pessoa - polimorfismo
+│   │   ├── Diretor.cs         # Exemplo de sealed class
+│   │   ├── Conta.cs           # Classe abstrata - template para contas
+│   │   ├── Corrente.cs        # Implementa Conta - classe concreta
+│   │   └── Computador.cs      # Demonstração da classe Object
 │   └── POO.csproj
 └── README.md                  # Este arquivo
 ```
@@ -90,8 +94,12 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 - [x] Polimorfismo
 - [x] Sobrescrita de métodos (override)
 - [x] Métodos virtuais (virtual)
+- [x] Classes abstratas
+- [x] Métodos abstratos
+- [x] Modificador protected
+- [x] Classe Object
+- [x] Sealed class
 - [ ] Interfaces
-- [ ] Classes abstratas
 
 ### 📌 Fase 3: Conceitos Intermediários (Em Progresso)
 - [x] Tratamento de exceções
@@ -307,6 +315,31 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 - Propriedade `Salary` pública do tipo `float`
 - **Override do método `Apresentar()`**: comportamento específico para professores
 - Exibe nome e salário do professor
+- **Sealed Class**: pode ser marcada como `sealed` para impedir herança
+
+**Classe Diretor (Herda de Professor):**
+- Demonstração de **sealed class**: erro proposital para mostrar restrição
+- Comentado no código para exemplificar classes seladas
+- Se Professor for `sealed`, Diretor não pode herdar
+
+**Classe Conta (Classe Abstrata):**
+- **Classe abstrata**: `public abstract class Conta` - não pode ser instanciada
+- **Propriedade protected**: `Saldo` acessível apenas na classe e derivadas
+- **Método concreto**: `ExibirSaldo()` implementado na classe base
+- **Método abstrato**: `abstract void Creditar(decimal valor)` - obrigatório implementar
+- Serve como template/contrato para classes derivadas
+
+**Classe Corrente (Herda de Conta):**
+- **Implementa classe abstrata**: `public class Corrente : Conta`
+- **Override obrigatório**: implementa `Creditar()` da classe abstrata
+- Propriedade `Tarifa` específica desta classe
+- Acessa `Saldo` protegido da classe base
+- Adiciona valor ao saldo sem regras extras
+
+**Classe Computador:**
+- Demonstração da classe `Object` (base de todas as classes em C#)
+- Herança implícita: todas as classes herdam de `Object`
+- Método `ToString()` herdado de Object
 
 **Classe ContaCorrente:**
 - **Construtor parametrizado**: inicialização obrigatória de conta e saldo
@@ -326,6 +359,12 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 - **Override**: palavra-chave `override` para sobrescrever métodos da classe base
 - **Construtor base**: chamada com `: base()` para inicializar classe pai
 - **Hierarquia de classes**: Pessoa como classe base, Aluno e Professor como derivadas
+- **Classes abstratas**: `abstract class` - não podem ser instanciadas, servem como template
+- **Métodos abstratos**: `abstract` - sem implementação, obrigatório implementar em derivadas
+- **Modificador protected**: membros acessíveis na classe e nas derivadas
+- **Sealed class**: `sealed` - impede que outras classes herdem dela
+- **Classe Object**: todas as classes em C# herdam implicitamente de Object
+- **Métodos de Object**: `ToString()`, `Equals()`, `GetHashCode()` disponíveis em todas as classes
 - **Encapsulamento forte**: propriedades privadas com métodos públicos
 - **Modificadores de acesso**: `public`, `private`
 - **Construtores parametrizados**: inicialização de estado obrigatória
@@ -433,6 +472,12 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 - **Override de métodos**: sobrescrita com `override` em classes derivadas
 - **Construtor base**: inicialização da classe pai com `: base()`
 - **Hierarquia de tipos**: Aluno e Professor herdam de Pessoa
+- **Classes abstratas**: `abstract class` - templates que não podem ser instanciados
+- **Métodos abstratos**: `abstract` - contratos sem implementação, obrigatórios nas derivadas
+- **Modificador protected**: visibilidade restrita à classe e suas derivadas
+- **Sealed class**: `sealed` - previne herança de uma classe
+- **Classe Object**: base implícita de todas as classes em C#
+- **Métodos de Object**: `ToString()`, `Equals()`, `GetHashCode()` herdados automaticamente
 
 #### ✅ Tratamento de Exceções
 - Lançamento de exceções: `throw new ArgumentException()`
@@ -453,7 +498,7 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 ## 📈 Progresso Atual
 
 ```
-███████████████▓░░░░ 78% Concluído
+████████████████▓░░░ 83% Concluído
 ```
 
 **Última atualização:** Dezembro 2025
@@ -462,12 +507,12 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 - ✅ Sistema de Estacionamento
 - ✅ Estrutura de Dados (Queue, Stack, Dictionary)
 - ✅ NuGet e Serialização JSON
-- ✅ POO - Sistema Bancário e Herança (Pessoa, Aluno, Professor)
+- ✅ POO Completo - Herança, Polimorfismo, Classes Abstratas e Sealed
 
 **🎯 Próximos Passos:**
-- Interfaces e classes abstratas
+- Interfaces
 - Delegates e eventos
-- Expressões Lambda
+- Expressões Lambda e LINQ
 
 ---
 

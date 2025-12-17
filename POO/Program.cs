@@ -21,3 +21,14 @@ a1.Apresentar();
 Professor p1 = new("Marina", 44, 1000F);
 
 p1.Apresentar();
+
+Corrente c = new();
+
+c.Creditar(1000);
+c.Creditar(500);
+c.Creditar(200);
+c.ExibirSaldo();
+
+Computador co = new();
+
+co.ToString();
