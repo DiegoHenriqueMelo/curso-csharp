@@ -49,6 +49,12 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 │   ├── Models/
 │   │   └── Venda.cs           # Modelo de dados
 │   └── NuGet.csproj
+├── 📂 POO/                        # Programação Orientada a Objetos
+│   ├── Program.cs             # Exemplo de uso de POO
+│   ├── Models/
+│   │   ├── ContaCorrente.cs   # Sistema bancário com encapsulamento
+│   │   └── Pessoa.cs          # Classe pessoa com validação
+│   └── POO.csproj
 └── README.md                  # Este arquivo
 ```
 
@@ -69,10 +75,15 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 - [x] Classes e objetos
 - [x] Encapsulamento
 - [x] Propriedades e indexadores
-- [x] Construtores
+- [x] Construtores (padrão e parametrizados)
 - [x] Validação de propriedades
 - [x] Propriedades computadas
 - [x] Relacionamentos entre classes
+- [x] Modificadores de acesso (public, private)
+- [x] Auto-propriedades
+- [x] Backing fields
+- [x] Métodos de instância
+- [x] Proteção de dados sensíveis
 - [ ] Herança
 - [ ] Polimorfismo
 - [ ] Interfaces
@@ -258,6 +269,46 @@ Integração com pacotes externos e serialização de dados:
 - Serialização automática de propriedades
 - Uso de bibliotecas de terceiros
 
+#### POO (Programação Orientada a Objetos)
+Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
+
+**Funcionalidades:**
+- 👤 Sistema de cadastro de pessoas
+- 🏦 Sistema bancário com conta corrente
+- 💰 Operações bancárias (saque, consulta de saldo)
+- 🔒 Encapsulamento completo de dados sensíveis
+
+**Classe Pessoa:**
+- Propriedade `Nome` com validação no setter
+- Backing field privado `_nome`
+- Transformação automática para maiúsculas no getter
+- Validação contra valores vazios
+- Lançamento de `ArgumentException` para entradas inválidas
+- Propriedade `Idade` com auto-implementação
+- Método `Apresentar()` para exibição de dados
+
+**Classe ContaCorrente:**
+- **Construtor parametrizado**: inicialização obrigatória de conta e saldo
+- **Propriedade pública**: `NumeroConta` (acesso externo permitido)
+- **Propriedade privada**: `Saldo` (encapsulamento total)
+- **Método `Sacar()`**: 
+  - Validação de saldo suficiente
+  - Decremento do saldo se válido
+  - Feedback ao usuário sobre operação
+- **Método `ExibirSaldo()`**: acesso controlado ao saldo privado
+- Formatação monetária (`R$`)
+
+**Conceitos Aplicados:**
+- **Encapsulamento forte**: propriedades privadas com métodos públicos
+- **Modificadores de acesso**: `public`, `private`
+- **Construtores parametrizados**: inicialização de estado obrigatória
+- **Validação de regras de negócio**: verificações antes de operações
+- **Backing fields**: controle granular de getters/setters
+- **Auto-propriedades**: simplificação quando não há lógica extra
+- **Separação de responsabilidades**: classes focadas em domínios específicos
+- **Proteção de dados sensíveis**: saldo bancário acessível apenas por métodos
+- **Tipos decimais**: uso de `decimal` para valores monetários precisos
+
 ### Links Úteis
 - [Documentação Oficial C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 - [Documentação .NET](https://docs.microsoft.com/pt-br/dotnet/)
@@ -331,18 +382,23 @@ Integração com pacotes externos e serialização de dados:
 - Gerenciamento de dependências no `.csproj`
 
 #### ✅ Programação Orientada a Objetos
-- Criação de classes personalizadas (`Pessoa`, `Calculadora`, `Curso`)
+- Criação de classes personalizadas (`Pessoa`, `Calculadora`, `Curso`, `ContaCorrente`)
 - **Construtores**: padrão e parametrizado
 - **Backing Fields**: campos privados (`_nome`, `_sobrenome`, `_idade`)
 - Propriedades com `get` e `set` personalizados
+- **Auto-propriedades**: implementação automática de getters/setters
 - **Validação**: lançamento de exceções (`ArgumentException`)
 - **Propriedades computadas**: somente leitura com expressão (`NomeCompleto`)
 - **Transformação de dados**: `ToUpper()` em getters
 - Métodos de instância
-- Encapsulamento de dados com validação
+- **Encapsulamento forte**: propriedades privadas acessadas por métodos públicos
+- **Modificadores de acesso**: `public`, `private`
+- **Proteção de dados sensíveis**: encapsulamento de saldo bancário
 - **Relacionamentos**: agregação (Curso tem lista de Pessoas)
 - **Coleções em classes**: `List<Pessoa>` como propriedade
 - Organização de código em bibliotecas reutilizáveis
+- **Tipos monetários**: uso de `decimal` para precisão financeira
+- **Regras de negócio**: validação de operações (saque com saldo suficiente)
 
 #### ✅ Tratamento de Exceções
 - Lançamento de exceções: `throw new ArgumentException()`
@@ -363,15 +419,16 @@ Integração com pacotes externos e serialização de dados:
 ## 📈 Progresso Atual
 
 ```
-█████████████░░░░░░░ 68% Concluído
+███████████████░░░░░ 73% Concluído
 ```
 
 **Última atualização:** Dezembro 2025
 
-**🏆 Projetos Práticos Concluídos:** 3
+**🏆 Projetos Práticos Concluídos:** 4
 - ✅ Sistema de Estacionamento
 - ✅ Estrutura de Dados (Queue, Stack, Dictionary)
 - ✅ NuGet e Serialização JSON
+- ✅ POO - Sistema Bancário (Encapsulamento Avançado)
 
 **🎯 Próximos Passos:**
 - Herança e polimorfismo
