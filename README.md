@@ -53,7 +53,9 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 │   ├── Program.cs             # Exemplo de uso de POO
 │   ├── Models/
 │   │   ├── ContaCorrente.cs   # Sistema bancário com encapsulamento
-│   │   └── Pessoa.cs          # Classe pessoa com validação
+│   │   ├── Pessoa.cs          # Classe base com virtual methods
+│   │   ├── Aluno.cs           # Herda de Pessoa - polimorfismo
+│   │   └── Professor.cs       # Herda de Pessoa - polimorfismo
 │   └── POO.csproj
 └── README.md                  # Este arquivo
 ```
@@ -84,8 +86,10 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 - [x] Backing fields
 - [x] Métodos de instância
 - [x] Proteção de dados sensíveis
-- [ ] Herança
-- [ ] Polimorfismo
+- [x] Herança
+- [x] Polimorfismo
+- [x] Sobrescrita de métodos (override)
+- [x] Métodos virtuais (virtual)
 - [ ] Interfaces
 - [ ] Classes abstratas
 
@@ -277,15 +281,32 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 - 🏦 Sistema bancário com conta corrente
 - 💰 Operações bancárias (saque, consulta de saldo)
 - 🔒 Encapsulamento completo de dados sensíveis
+- 🎓 Hierarquia de classes (Pessoa → Aluno/Professor)
+- 🔄 Polimorfismo com sobrescrita de métodos
 
-**Classe Pessoa:**
+**Classe Pessoa (Classe Base):**
+- **Construtores**: padrão (sem parâmetros) e parametrizado (nome, idade)
 - Propriedade `Nome` com validação no setter
 - Backing field privado `_nome`
 - Transformação automática para maiúsculas no getter
 - Validação contra valores vazios
 - Lançamento de `ArgumentException` para entradas inválidas
 - Propriedade `Idade` com auto-implementação
-- Método `Apresentar()` para exibição de dados
+- **Método virtual** `Apresentar()`: permite sobrescrita nas classes derivadas
+
+**Classe Aluno (Herda de Pessoa):**
+- **Herança**: `public class Aluno : Pessoa`
+- **Construtor**: recebe nome, idade e nota, chama construtor base com `: base(nome, idade)`
+- Propriedade `Nota` privada (encapsulamento)
+- **Override do método `Apresentar()`**: comportamento específico para alunos
+- Exibe nome e nota do aluno
+
+**Classe Professor (Herda de Pessoa):**
+- **Herança**: `public class Professor : Pessoa`
+- **Construtor**: recebe nome, idade e salário, chama construtor base
+- Propriedade `Salary` pública do tipo `float`
+- **Override do método `Apresentar()`**: comportamento específico para professores
+- Exibe nome e salário do professor
 
 **Classe ContaCorrente:**
 - **Construtor parametrizado**: inicialização obrigatória de conta e saldo
@@ -299,6 +320,12 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 - Formatação monetária (`R$`)
 
 **Conceitos Aplicados:**
+- **Herança**: reutilização de código através de classes base
+- **Polimorfismo**: métodos com comportamentos diferentes em cada classe derivada
+- **Métodos virtuais**: palavra-chave `virtual` permite sobrescrita
+- **Override**: palavra-chave `override` para sobrescrever métodos da classe base
+- **Construtor base**: chamada com `: base()` para inicializar classe pai
+- **Hierarquia de classes**: Pessoa como classe base, Aluno e Professor como derivadas
 - **Encapsulamento forte**: propriedades privadas com métodos públicos
 - **Modificadores de acesso**: `public`, `private`
 - **Construtores parametrizados**: inicialização de estado obrigatória
@@ -308,6 +335,7 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 - **Separação de responsabilidades**: classes focadas em domínios específicos
 - **Proteção de dados sensíveis**: saldo bancário acessível apenas por métodos
 - **Tipos decimais**: uso de `decimal` para valores monetários precisos
+- **Tipos numéricos variados**: `double` para notas, `float` para salário
 
 ### Links Úteis
 - [Documentação Oficial C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
@@ -399,6 +427,12 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 - Organização de código em bibliotecas reutilizáveis
 - **Tipos monetários**: uso de `decimal` para precisão financeira
 - **Regras de negócio**: validação de operações (saque com saldo suficiente)
+- **Herança**: criação de hierarquias de classes com reutilização de código
+- **Polimorfismo**: comportamentos diferentes para o mesmo método em classes derivadas
+- **Métodos virtuais**: uso de `virtual` para permitir sobrescrita
+- **Override de métodos**: sobrescrita com `override` em classes derivadas
+- **Construtor base**: inicialização da classe pai com `: base()`
+- **Hierarquia de tipos**: Aluno e Professor herdam de Pessoa
 
 #### ✅ Tratamento de Exceções
 - Lançamento de exceções: `throw new ArgumentException()`
@@ -419,7 +453,7 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 ## 📈 Progresso Atual
 
 ```
-███████████████░░░░░ 73% Concluído
+███████████████▓░░░░ 78% Concluído
 ```
 
 **Última atualização:** Dezembro 2025
@@ -428,12 +462,12 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 - ✅ Sistema de Estacionamento
 - ✅ Estrutura de Dados (Queue, Stack, Dictionary)
 - ✅ NuGet e Serialização JSON
-- ✅ POO - Sistema Bancário (Encapsulamento Avançado)
+- ✅ POO - Sistema Bancário e Herança (Pessoa, Aluno, Professor)
 
 **🎯 Próximos Passos:**
-- Herança e polimorfismo
 - Interfaces e classes abstratas
 - Delegates e eventos
+- Expressões Lambda
 
 ---
 
