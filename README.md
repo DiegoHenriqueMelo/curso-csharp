@@ -99,7 +99,7 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 - [x] Modificador protected
 - [x] Classe Object
 - [x] Sealed class
-- [ ] Interfaces
+- [x] Interfaces
 
 ### 📌 Fase 3: Conceitos Intermediários (Em Progresso)
 - [x] Tratamento de exceções
@@ -341,6 +341,16 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 - Herança implícita: todas as classes herdam de `Object`
 - Método `ToString()` herdado de Object
 
+**Interface ICalculadora:**
+- **Interface**: define um contrato com métodos sem implementação
+- Métodos obrigatórios: `Somar`, `Subtrair`, `Multiplicar`, `Dividir`
+- Não possui implementação de código, apenas assinaturas
+
+**Classe Calculadora (Implementa ICalculadora):**
+- **Implementação de Interface**: `public class Calculadora : ICalculadora`
+- Obrigada a implementar todos os métodos definidos na interface
+- Implementação concreta das operações matemáticas básicas
+
 **Classe ContaCorrente:**
 - **Construtor parametrizado**: inicialização obrigatória de conta e saldo
 - **Propriedade pública**: `NumeroConta` (acesso externo permitido)
@@ -478,6 +488,7 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 - **Sealed class**: `sealed` - previne herança de uma classe
 - **Classe Object**: base implícita de todas as classes em C#
 - **Métodos de Object**: `ToString()`, `Equals()`, `GetHashCode()` herdados automaticamente
+- **Interfaces**: contratos de implementação com métodos sem corpo
 
 #### ✅ Tratamento de Exceções
 - Lançamento de exceções: `throw new ArgumentException()`
@@ -509,8 +520,7 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 - ✅ NuGet e Serialização JSON
 - ✅ POO Completo - Herança, Polimorfismo, Classes Abstratas e Sealed
 
-**🎯 Próximos Passos:**
-- Interfaces
+**Interfaces
 - Delegates e eventos
 - Expressões Lambda e LINQ
 

@@ -1,5 +1,5 @@
 ﻿using POO.Models;
-
+using POO.Interface;
 // Pessoa p1 = new()
 // {
 //     Nome = "Diego",
@@ -32,3 +32,6 @@ c.ExibirSaldo();
 Computador co = new();
 
 co.ToString();
+
+ICalculadora calc = new Calculadora();
+Console.WriteLine(calc.Multiplicar(5,5));
