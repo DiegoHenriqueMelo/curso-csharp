@@ -61,6 +61,13 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 │   │   ├── Corrente.cs        # Implementa Conta - classe concreta
 │   │   └── Computador.cs      # Demonstração da classe Object
 │   └── POO.csproj
+├── 📂 GameStore/                  # API REST com Minimal APIs
+│   ├── Program.cs             # Configuração e DI
+│   ├── Endpoints/             # Definição das rotas
+│   ├── Data/                  # Contexto do EF Core e Migrations
+│   ├── Dtos/                  # Data Transfer Objects
+│   ├── Models/                # Entidades do domínio
+│   └── GameStore.csproj
 └── README.md                  # Este arquivo
 ```
 
@@ -113,18 +120,18 @@ Este repositório documenta minha jornada de aprendizado em **C#** e **.NET**. A
 - [ ] Generics
 
 ### 📌 Fase 4: .NET Core e Aplicações Modernas
-- [ ] Introdução ao .NET Core/.NET 6+
-- [ ] Entity Framework Core (ORM)
-- [ ] Dependency Injection
-- [ ] Async/Await e programação assíncrona
-- [ ] APIs REST com ASP.NET Core
-- [ ] Minimal APIs
+- [x] Introdução ao .NET Core/.NET 6+
+- [x] Entity Framework Core (ORM)
+- [x] Dependency Injection
+- [x] Async/Await e programação assíncrona
+- [x] APIs REST com ASP.NET Core
+- [x] Minimal APIs
 
 ### 📌 Fase 5: Banco de Dados
 - [ ] SQL Server básico
 - [ ] Conexão com banco de dados (ADO.NET)
-- [ ] Entity Framework Core avançado
-- [ ] Migrations e Code First
+- [x] Entity Framework Core avançado
+- [x] Migrations e Code First
 - [ ] Dapper (micro ORM)
 
 ### 📌 Fase 6: Desenvolvimento Web
@@ -386,6 +393,38 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 - **Tipos decimais**: uso de `decimal` para valores monetários precisos
 - **Tipos numéricos variados**: `double` para notas, `float` para salário
 
+#### GameStore
+API REST completa desenvolvida com ASP.NET Core Minimal APIs para gerenciamento de catálogo de jogos.
+
+**Funcionalidades:**
+- 🎮 CRUD completo de Jogos (Create, Read, Update, Delete)
+- 🗄️ Persistência de dados com SQLite
+- 🔄 Migrations automáticas na inicialização
+- 🛠️ Testes de endpoints com arquivo `.http`
+
+**Arquitetura e Padrões:**
+- **Minimal APIs**: Rotas definidas de forma concisa e performática
+- **Entity Framework Core**: ORM para manipulação do banco de dados
+- **DTOs (Data Transfer Objects)**: Separação entre modelo de domínio e dados expostos
+  - `GameSummaryDto`, `GameDetailsDto`, `CreateGameDto`, `UpdateGameDto`
+- **Dependency Injection**: Injeção do `GameStoreContext` nos endpoints
+- **Extension Methods**: Organização da configuração (`AddGameStoreDb`, `MapGamesEndpoints`)
+- **Asynchronous Programming**: Uso de `async/await` em todas as operações de I/O
+
+**Endpoints:**
+- `GET /games`: Lista todos os jogos (com projeção para DTO)
+- `GET /games/{id}`: Busca jogo por ID
+- `POST /games`: Cria novo jogo
+- `PUT /games/{id}`: Atualiza jogo existente
+- `DELETE /games/{id}`: Remove jogo
+
+**Conceitos Aplicados:**
+- Mapeamento de rotas (`MapGet`, `MapPost`, `MapPut`, `MapDelete`)
+- Validação de dados
+- Tratamento de erros (NotFound, NoContent)
+- Configuração de serviços no `Program.cs`
+- Uso de `Records` para DTOs imutáveis
+
 ### Links Úteis
 - [Documentação Oficial C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 - [Documentação .NET](https://docs.microsoft.com/pt-br/dotnet/)
@@ -512,17 +551,19 @@ Aplicação prática de conceitos avançados de POO com exemplos do mundo real:
 ████████████████▓░░░ 83% Concluído
 ```
 
-**Última atualização:** Dezembro 2025
+**Última atualização:** Janeiro 2026
 
-**🏆 Projetos Práticos Concluídos:** 4
+**🏆 Projetos Práticos Concluídos:** 5
 - ✅ Sistema de Estacionamento
 - ✅ Estrutura de Dados (Queue, Stack, Dictionary)
 - ✅ NuGet e Serialização JSON
 - ✅ POO Completo - Herança, Polimorfismo, Classes Abstratas e Sealed
+- ✅ GameStore API - Minimal APIs, EF Core e SQLite
 
-**Interfaces
+**🎯 Próximos Passos:**
 - Delegates e eventos
 - Expressões Lambda e LINQ
+- Testes Unitários
 
 ---
 
